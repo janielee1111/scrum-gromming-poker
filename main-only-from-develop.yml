@@ -2,8 +2,9 @@ name: main only accepts develop
 on:
   pull_request:
     branches: [main]
+    types: [opened, reopened, synchronize, edited]
 jobs:
-  check-source:
+  only-from-devlop:
     runs-on: ubuntu-latest
     steps:
       - name: Check the PR comes from develop in this repo
