@@ -1,0 +1,20 @@
+name: main only accepts develop
+on:
+  pull_request:
+    branches: [main]
+jobs:
+  check-source:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check the PR comes from develop in this repo
+        env:
+          SOURCE_BRANCH: ${{ github.head_ref }}
+          SOURCE_REPO: ${{ github.event.pull_request.head.repo.full_name }}
+          THIS_REPO: ${{ github.repository }}
+        run: |
+          if [ "$SOURCE_BRANCH" != "develop" ] || [ "$SOURCE_REPO" != "$THIS_REPO" ]; then
+            echo "PRs into main must come from develop in $THIS_REPO."
+            echo "This PR comes from $SOURCE_BRANCH in $SOURCE_REPO."
+            exit 1
+          fi
+          echo "OK: PR comes from develop in $THIS_REPO."
