@@ -1,4 +1,4 @@
-import { VOTING_CARDS } from '@scrum-grooming-poker/shared'
+import { VOTING_CARDS } from '@scrum-grooming-poker/shared';
 
 function App() {
   return (
@@ -6,7 +6,7 @@ function App() {
       <h1>Scrum Grooming Poker</h1>
       <p>Voting cards: {VOTING_CARDS.join(', ')}</p>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
