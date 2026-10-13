@@ -12,13 +12,12 @@ A planning poker app for scrum teams to estimate stories together.
 Requires Node.js and pnpm.
 
 ```bash
-# backend
-cd backend
+# install all workspace dependencies from the repository root
 pnpm install
-pnpm start:dev
 
-# frontend
-cd frontend
-pnpm install
-pnpm dev
+# run the backend
+pnpm --filter backend start:dev
+
+# run the frontend
+pnpm --filter frontend dev
 ```
