@@ -6,6 +6,10 @@ import App from './App';
 it('renders the heading and voting cards', () => {
   render(<App />);
 
-  expect(screen.getByRole('heading', { name: 'Scrum Grooming Poker' })).toBeTruthy();
-  expect(screen.getByText(`Voting cards: ${VOTING_CARDS.join(', ')}`)).toBeTruthy();
+  expect(
+    screen.getByRole('heading', { name: 'Scrum Grooming Poker' }),
+  ).toBeTruthy();
+  expect(
+    screen.getByText(`Voting cards: ${VOTING_CARDS.join(', ')}`),
+  ).toBeTruthy();
 });
