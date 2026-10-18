@@ -152,6 +152,12 @@ Boris Cherny (creator of Claude Code) keeps his team's file around 100 lines. Un
 
 Prefer single-file or single-test runs during iteration. Full suites are for the final verification pass.
 
+### Commit messages
+- When asked for a commit message, write a single line (overrides the body rule in section 6).
+- Start it with the ticket prefix from the current feature branch name, in the form `<LETTERS>-<NUMBER>` (for example `STAR-2`), followed by `: ` and a short imperative summary.
+- Get the branch name from `git branch --show-current`. Example: branch `STAR-2-add-tests` gives `STAR-2: Add Vitest setup and sample tests`.
+- If the branch name has no such prefix, ask the user for it instead of guessing.
+
 <!-- ### Layout
 - Source lives in: `TODO`
 - Tests live in: `TODO`
