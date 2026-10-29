@@ -1,0 +1,8 @@
+   {
+     "name": "scrum-poker-web", // what to call your site on Cloudflare
+     "compatibility_date": "2026-10-01", // which version of Cloudflare's rules to follow
+     "assets": {
+       "directory": "./dist", // which folder to upload
+       "not_found_handling": "single-page-application" // send unknown pages to your app instead of 404
+     }
+   }
