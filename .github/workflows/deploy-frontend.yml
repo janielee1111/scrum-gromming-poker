@@ -18,7 +18,7 @@ jobs:
         with:
           node-version: 24
           cache: pnpm
-      - run: pnpm install --frozen-lockfile --filter frontend
+      - run: pnpm install --frozen-lockfile --filter frontend...
       - run: pnpm --filter frontend build
         env: 
           VITE_SERVER_URL: ${{ vars.VITE_SERVER_URL }}
