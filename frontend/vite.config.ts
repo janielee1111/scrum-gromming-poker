@@ -2,6 +2,7 @@ import react, { reactCompilerPreset } from '@vitejs/plugin-react';
 import babel from '@rolldown/plugin-babel';
 import { defineConfig } from 'vitest/config';
 import { loadEnv } from 'vite';
+import tailwindcss from '@tailwindcss/vite';
 
 // https://vite.dev/config/
 export default defineConfig(({ mode }) => {
@@ -11,7 +12,7 @@ export default defineConfig(({ mode }) => {
     throw new Error('VITE_SERVER_URL is not set');
   }
   return {
-    plugins: [react(), babel({ presets: [reactCompilerPreset()] })],
+    plugins: [react(), babel({ presets: [reactCompilerPreset()] }), tailwindcss()],
     test: {
       environment: 'jsdom',
       include: ['src/**/*.test.{ts,tsx}'],
