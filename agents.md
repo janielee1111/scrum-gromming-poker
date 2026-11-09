@@ -154,7 +154,7 @@ Prefer single-file or single-test runs during iteration. Full suites are for the
 
 ### Commit messages
 - When asked for a commit message, write a single line (overrides the body rule in section 6).
-- Start it with the ticket prefix from the current feature branch name, in the form `<LETTERS>-<NUMBER>` (for example `STAR-2`), followed by `: ` and a short imperative summary.
+- Start it with the ticket prefix from the current feature branch name, in the form `<LETTERS>-<NUMBER>` (for example `STAR-2`), followed by `: ` and a concise, imperative summary that names the affected component and the concrete change or behavior. Avoid vague summaries such as "update" or "fix bug"; keep the subject under 72 characters.
 - Get the branch name from `git branch --show-current`. Example: branch `STAR-2-add-tests` gives `STAR-2: Add Vitest setup and sample tests`.
 - If the branch name has no such prefix, ask the user for it instead of guessing.
 
