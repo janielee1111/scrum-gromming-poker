@@ -1,6 +1,12 @@
 import { Button } from '../components/ui/Button';
 import { Card } from '../components/ui/Card';
 import { TextField } from '../components/ui/TextField';
+import { CreateRoomForm, type CreateRoomInput } from '../components/CreateRoomForm';
+
+async function handleCreateRoom(input: CreateRoomInput){
+  console.log('Create room:', input);
+  await new Promise((resolve) => setTimeout(resolve, 800));
+}
 
 export function HomePage() {
   return (
@@ -50,6 +56,7 @@ export function HomePage() {
               </h2>
               <p className="text-base text-muted">You'll be the facilitator.</p>
             </div>
+            <CreateRoomForm onSubmit={handleCreateRoom} />
           </Card>
 
           <Card aria-labelledby="join-heading">

@@ -13,6 +13,13 @@
   --color-primary: #2b46d6; /* bg-primary, text-primary, border-primary */
   --color-primary-hover: #1c2f9e; /* hover:bg-primary-hover */
   --color-primary-soft: #eaeeff; /* bg-primary-soft */
+  --color-warning: #b5530f; /* text-warning */
+  --color-warning-soft: #fdf0e6; /* bg-warning-soft */
+  --color-warning-ink: #5c2a06; /* text-warning-ink */
+  --color-warning-line: #f3d7bf; /* border-warning-line */
+  --color-warning-soft: #fdf0e6;   /* bg-warning-soft */
+  --color-warning-ink: #5c2a06;    /* text-warning-ink */
+  --color-warning-line: #f3d7bf;   /* border-warning-line */
 
   --font-sans: 'IBM Plex Sans', sans-serif;
   --font-mono: 'IBM Plex Mono', monospace;
