@@ -12,7 +12,11 @@ export default defineConfig(({ mode }) => {
     throw new Error('VITE_SERVER_URL is not set');
   }
   return {
-    plugins: [react(), babel({ presets: [reactCompilerPreset()] }), tailwindcss()],
+    plugins: [
+      react(),
+      babel({ presets: [reactCompilerPreset()] }),
+      tailwindcss(),
+    ],
     test: {
       environment: 'jsdom',
       include: ['src/**/*.test.{ts,tsx}'],

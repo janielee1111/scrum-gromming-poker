@@ -1,28 +1,33 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 @theme {
-    /* Only your design's colours exist: Tailwind's default palette is switched off */
-    --color-*: initial;
+  /* Only your design's colours exist: Tailwind's default palette is switched off */
+  --color-*: initial;
 
-    --color-page: #f5f6f8;          /* bg-page */
-    --color-surface: #ffffff;       /* bg-surface */
-    --color-ink: #15171c;           /* text-ink, border-ink */
-    --color-muted: #5b6170;         /* text-muted */
-    --color-line: #e3e5ea;          /* border-line */
-    --color-line-strong: #c9cdd6;   /* border-line-strong */
-    --color-primary: #2b46d6;       /* bg-primary, text-primary, border-primary */
-    --color-primary-hover: #1c2f9e; /* hover:bg-primary-hover */
-    --color-primary-soft: #eaeeff;  /* bg-primary-soft */
+  --color-page: #f5f6f8; /* bg-page */
+  --color-surface: #ffffff; /* bg-surface */
+  --color-ink: #15171c; /* text-ink, border-ink */
+  --color-muted: #5b6170; /* text-muted */
+  --color-line: #e3e5ea; /* border-line */
+  --color-line-strong: #c9cdd6; /* border-line-strong */
+  --color-primary: #2b46d6; /* bg-primary, text-primary, border-primary */
+  --color-primary-hover: #1c2f9e; /* hover:bg-primary-hover */
+  --color-primary-soft: #eaeeff; /* bg-primary-soft */
 
-    --font-sans: "IBM Plex Sans", sans-serif;
-    --font-mono: "IBM Plex Mono", monospace;
+  --font-sans: 'IBM Plex Sans', sans-serif;
+  --font-mono: 'IBM Plex Mono', monospace;
 
-    --radius-field: 10px;           /* rounded-field */
-    --radius-card: 16px;            /* rounded-card */
+  --radius-field: 10px; /* rounded-field */
+  --radius-card: 16px; /* rounded-card */
+
+  --text-display: 44px; /* text-display */
+  --text-display--line-height: 1.15;
+  --text-display--letter-spacing: -0.5px;
+  --text-title: 22px; /* text-title */
 }
 
 @layer base {
-    body {
-        @apply bg-page font-sans text-ink;
-    }
+  body {
+    @apply bg-page font-sans text-ink;
+  }
 }
