@@ -1,0 +1,17 @@
+{
+  "name": "@scrum-grooming-poker/shared",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "lint": "oxlint src/",
+    "typecheck": "tsc --noEmit -p tsconfig.json"
+  },
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "devDependencies": {
+    "oxlint": "^1.81.0",
+    "typescript": "^6.0.2"
+  }
+}
