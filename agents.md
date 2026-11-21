@@ -87,7 +87,7 @@ For every task:
 - Context is the constraint. Long sessions with accumulated failed attempts perform worse than fresh sessions with a better prompt.
 - After two failed corrections on the same issue, stop. Summarize what you learned and ask the user to reset the session with a sharper prompt.
 - Use subagents (Claude Code: "use subagents to investigate X") for exploration tasks that would otherwise pollute the main context with dozens of file reads.
-- When committing, write descriptive commit messages (subject under 72 chars, body explains the why). No "update file" or "fix bug" commits. No "Co-Authored-By: Claude" attribution unless the project explicitly wants it.
+- When committing, follow the repository’s `git-commit` skill for verification, staging, subject formatting, and status checks. No "Co-Authored-By: Claude" attribution unless the project explicitly wants it.
 
 ---
 
@@ -151,26 +151,6 @@ Boris Cherny (creator of Claude Code) keeps his team's file around 100 lines. Un
 - Run locally: `pnpm dev` (web on http://localhost:5173, server on http://localhost:3000)
 
 Prefer single-file or single-test runs during iteration. Full suites are for the final verification pass.
-
-### Commit messages
-- When asked for a commit message, write a single line (overrides the body rule in section 6).
-- Start it with the ticket prefix from the current feature branch name, in the form `<LETTERS>-<NUMBER>` (for example `STAR-2`), followed by `: ` and a concise, imperative summary that names the affected component and the concrete change or behavior. Avoid vague summaries such as "update" or "fix bug"; keep the subject under 72 characters.
-- Get the branch name from `git branch --show-current`. Example: branch `STAR-2-add-tests` gives `STAR-2: Add Vitest setup and sample tests`.
-- If the branch name has no such prefix, ask the user for it instead of guessing.
-
-<!-- ### Layout
-- Source lives in: `TODO`
-- Tests live in: `TODO`
-- Do not modify: `TODO` (generated code, vendored deps, legacy areas)
-
-### Conventions specific to this repo
-- Naming: `TODO`
-- Import style: `TODO`
-- Error handling pattern: `TODO`
-- Testing pattern and framework: `TODO`
-
-### Forbidden
-- `TODO`: things that look reasonable but will break this project. -->
 
 ---
 
