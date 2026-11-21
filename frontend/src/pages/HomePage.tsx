@@ -1,9 +1,12 @@
 import { Button } from '../components/ui/Button';
 import { Card } from '../components/ui/Card';
 import { TextField } from '../components/ui/TextField';
-import { CreateRoomForm, type CreateRoomInput } from '../components/CreateRoomForm';
+import {
+  CreateRoomForm,
+  type CreateRoomInput,
+} from '../components/CreateRoomForm';
 
-async function handleCreateRoom(input: CreateRoomInput){
+async function handleCreateRoom(input: CreateRoomInput) {
   console.log('Create room:', input);
   await new Promise((resolve) => setTimeout(resolve, 800));
 }
