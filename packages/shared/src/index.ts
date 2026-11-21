@@ -15,3 +15,5 @@ export const VOTING_CARDS = [
 ] as const;
 
 export type VoteValue = (typeof VOTING_CARDS)[number];
+
+export * from './decks';
