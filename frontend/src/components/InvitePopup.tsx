@@ -1,6 +1,6 @@
 export type InvitePopupProps = {
-  code?: string;
-  inviteToken?: string;
+  code: string;
+  inviteToken: string;
   roomName?: string;
 };
 
