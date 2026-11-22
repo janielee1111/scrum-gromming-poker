@@ -1,0 +1,88 @@
+.backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  background: rgba(21, 23, 28, 0.55);
+}
+
+.card {
+  width: 100%;
+  max-width: 600px;
+  max-height: calc(100vh - 32px);
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  padding: 32px;
+  background: var(--color-surface);
+  border-radius: 18px;
+}
+
+.title {
+  margin: 0;
+  font-size: 26px;
+  font-weight: 700;
+}
+.subtitle {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.5;
+  color: var(--color-muted);
+}
+
+.header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+}
+.headText {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.closeButton {
+  width: 44px;
+  height: 44px;
+  flex: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  border-radius: 10px;
+  background: var(--color-page);
+  color: var(--color-ink);
+  cursor: pointer;
+}
+
+.closeButton:focus-visible,
+.doneButton:focus-visible {
+  outline: 2px solid var(--color-line);
+  outline-offset: 2px;
+}
+
+.doneButton {
+  height: 52px;
+  border: 0;
+  border-radius: var(--radius-field);
+  background: var(--color-ink);
+  color: var(--color-surface);
+  font: inherit;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  .card {
+    padding: 24px;
+  }
+  .title {
+    font-size: var(--text-title);
+  }
+}
