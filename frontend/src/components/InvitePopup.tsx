@@ -7,6 +7,7 @@ export type InvitePopupProps = {
   inviteToken: string;
   roomName?: string;
   origin?: string;
+  onClose: () => void;
 };
 
 const focusRing =
@@ -17,6 +18,7 @@ export function InvitePopup({
   inviteToken,
   roomName,
   origin = window.location.origin,
+  onClose,
 }: InvitePopupProps) {
   const link = buildInviteLink(origin, code, inviteToken);
 
@@ -61,6 +63,7 @@ export function InvitePopup({
           <button
             type="button"
             aria-label="Close"
+            onClick={onClose}
             className={`flex size-11 flex-none cursor-pointer items-center justify-center rounded-field bg-page text-ink ${focusRing}`}
           >
             <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true">

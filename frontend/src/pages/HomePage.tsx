@@ -1,17 +1,30 @@
+import { useState } from 'react';
 import { Button } from '../components/ui/Button';
 import { Card } from '../components/ui/Card';
 import { TextField } from '../components/ui/TextField';
+import { InvitePopup } from '../components/InvitePopup';
 import {
   CreateRoomForm,
   type CreateRoomInput,
 } from '../components/CreateRoomForm';
 
-async function handleCreateRoom(input: CreateRoomInput) {
-  console.log('Create room:', input);
-  await new Promise((resolve) => setTimeout(resolve, 800));
-}
-
 export function HomePage() {
+  const [invite, setInvite] = useState<{
+    code: string;
+    inviteToken: string;
+    roomName: string;
+  } | null>(null);
+
+  async function handleCreateRoom(input: CreateRoomInput) {
+    console.log('Create room:', input);
+    await new Promise((resolve) => setTimeout(resolve, 800));
+    setInvite({
+      code: 'ab4-k9x',
+      inviteToken: 'Xq7fR2mLp9vA4kT8wZc1Ne',
+      roomName: input.roomName,
+    });
+  }
+
   return (
     <div className="flex min-h-screen flex-col">
       <header className="flex items-center justify-between border-b border-line bg-surface px-5 py-4 sm:px-10 sm:py-5">
@@ -87,6 +100,8 @@ export function HomePage() {
           </Card>
         </div>
       </main>
+
+      {invite && <InvitePopup {...invite} onClose={() => setInvite(null)} />}
     </div>
   );
 }
