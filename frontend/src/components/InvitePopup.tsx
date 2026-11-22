@@ -1,5 +1,6 @@
 import { buildInviteLink } from '../lib/inviteLink';
 import { useRef, useState } from 'react';
+import { QRCodeSVG } from 'qrcode.react';
 
 export type InvitePopupProps = {
   code: string;
@@ -124,7 +125,22 @@ export function InvitePopup({
             </p>
           )}
         </div>
-        {/* Step 4: QR code goes here */}
+        <div className="flex flex-col items-center gap-6 rounded-[14px] border border-line p-5 sm:flex-row">
+          <div
+            role="img"
+            aria-label="QR code for the invite link"
+            className="flex-none text-ink"
+          >
+            <QRCodeSVG value={link} size={132} fgColor="currentColor" />
+          </div>
+          <div className="flex flex-col gap-1.5">
+            <span className="text-base font-semibold">In the same room?</span>
+            <span className="text-[15px] leading-normal text-muted">
+              Put this on the shared screen. Teammates scan it with their phone
+              camera to join.
+            </span>
+          </div>
+        </div>
 
         <button
           type="button"
