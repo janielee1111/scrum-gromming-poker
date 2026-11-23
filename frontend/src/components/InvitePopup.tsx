@@ -8,6 +8,7 @@ export type InvitePopupProps = {
   roomName?: string;
   origin?: string;
   onClose: () => void;
+  onDone: (code: string) => void;
 };
 
 const focusRing =
@@ -19,6 +20,7 @@ export function InvitePopup({
   roomName,
   origin = window.location.origin,
   onClose,
+  onDone,
 }: InvitePopupProps) {
   const link = buildInviteLink(origin, code, inviteToken);
 
@@ -148,6 +150,7 @@ export function InvitePopup({
         <button
           type="button"
           className={`h-[52px] cursor-pointer rounded-field bg-ink text-base font-semibold text-surface ${focusRing}`}
+          onClick={() => onDone(code)}
         >
           Done, go to the room
         </button>

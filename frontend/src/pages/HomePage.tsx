@@ -101,7 +101,16 @@ export function HomePage() {
         </div>
       </main>
 
-      {invite && <InvitePopup {...invite} onClose={() => setInvite(null)} />}
+      {invite && (
+        <InvitePopup
+          {...invite}
+          onClose={() => setInvite(null)}
+          onDone={(code) => {
+            setInvite(null);
+            console.log(`Go to /r/${code}`);
+          }}
+        />
+      )}
     </div>
   );
 }
